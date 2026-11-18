@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
                 tvError.setVisibility(View.GONE);
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
-                finish(); // Không cho phép nhấn Back quay lại màn đăng nhập
+                finish();
             } else {
                 tvError.setText("Sai tên đăng nhập hoặc mật khẩu");
                 tvError.setVisibility(View.VISIBLE);

@@ -64,12 +64,11 @@ public class AddAppointmentActivity extends AppCompatActivity {
         }
 
         int day = datePicker.getDayOfMonth();
-        int month = datePicker.getMonth(); // 0-11
+        int month = datePicker.getMonth();
         int year = datePicker.getYear();
         int hour = timePicker.getHour();
         int minute = timePicker.getMinute();
 
-        // Kiểm tra thời gian phải sau thời điểm hiện tại
         Calendar selectedCal = Calendar.getInstance();
         selectedCal.set(year, month, day, hour, minute, 0);
 
@@ -79,7 +78,6 @@ public class AddAppointmentActivity extends AppCompatActivity {
             return;
         }
 
-        // Lưu dạng yyyy-MM-dd và HH:mm
         String formattedDate = String.format(Locale.getDefault(), "%04d-%02d-%02d", year, month + 1, day);
         String formattedTime = String.format(Locale.getDefault(), "%02d:%02d", hour, minute);
         boolean isReminder = switchReminder.isChecked();

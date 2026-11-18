@@ -10,7 +10,6 @@ public class Appointment {
 
     public Appointment() {}
 
-    // Thêm constructor 6 tham số này để hết lỗi ở DatabaseHelper
     public Appointment(int id, String title, String location, String date, String time, boolean reminder) {
         this.id = id;
         this.title = title;
@@ -28,7 +27,6 @@ public class Appointment {
         this.reminder = reminder;
     }
 
-    // Các hàm Getter, Setter và getFormattedDate() giữ nguyên bên dưới...
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 

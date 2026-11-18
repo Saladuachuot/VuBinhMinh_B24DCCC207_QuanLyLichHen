@@ -53,10 +53,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(createUsersTable);
         db.execSQL(createAppointmentsTable);
 
-        // Chèn tài khoản mẫu
         insertSampleUser(db, "admin", "123456");
 
-        // Chèn 3 lịch hẹn mẫu (ngày lưu yyyy-MM-dd)
         insertSampleAppointment(db, new Appointment("Họp nhóm đồ án", "Phòng B203", "2026-10-25", "09:00", true));
         insertSampleAppointment(db, new Appointment("Khám răng", "Nha khoa Minh Tâm", "2026-10-26", "14:30", true));
         insertSampleAppointment(db, new Appointment("Đi cà phê với bạn", "Highland Coffee", "2026-10-27", "19:00", false));
@@ -86,7 +84,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.insert(TABLE_APPOINTMENTS, null, values);
     }
 
-    // Các phương thức theo yêu cầu đề bài
     public long insertUser(String username, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
